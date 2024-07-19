@@ -19,7 +19,7 @@ const DogPage: React.FC = () => {
   useEffect(() => {
     const fetchDog = async () => {
       try {
-        const response = await axios.get(`https://api.thecatapi.com/v1/images/search?limit=40&breed_ids=beng&api_key=live_3GRn8gS1S54thBWrsAgSQCS3WJ5faNC4CIpv6xcmJFcSzV95dYdK9c2TDa8Akw6N`);
+        const response = await axios.get(`https://api.thecatapi.com/v1/images/search?limit=30&breed_ids=beng&api_key=live_3GRn8gS1S54thBWrsAgSQCS3WJ5faNC4CIpv6xcmJFcSzV95dYdK9c2TDa8Akw6N`);
 
         setDog(response.data);
       } catch (err) {

@@ -17,7 +17,7 @@ const useDogs = () => {
   useEffect(() => {
     const fetchDogs = async () => {
       try {
-        const response = await axios.get<Dog[]>('https://api.thedogapi.com/v1/breeds?limit=40', {
+        const response = await axios.get<Dog[]>('https://api.thedogapi.com/v1/breeds?limit=30', {
           headers: { 'x-api-key': 'live_3GRn8gS1S54thBWrsAgSQCS3WJ5faNC4CIpv6xcmJFcSzV95dYdK9c2TDa8Akw6N' }
         });
         setDogs(response.data);

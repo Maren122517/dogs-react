@@ -14,13 +14,13 @@ interface DogListProps {
 
 const DogList: React.FC<DogListProps> = ({ dogs }) => {
   return (
-    <div>
+    <div className="dog-list">
       {dogs.map((dog) => (
-        <div key={dog.id}>
+        <div key={dog.id} className="dog-card">
           <Link to={`/dogs/${dog.id}`}>
             <h2>{dog.name}</h2>
             <p>{dog.temperament}</p>
-            {dog.image && <img src={dog.image.url} alt={dog.name} width={200} />}
+            {dog.image && <img src={dog.image.url} alt={dog.name} />}
           </Link>
         </div>
       ))}
@@ -29,4 +29,5 @@ const DogList: React.FC<DogListProps> = ({ dogs }) => {
 };
 
 export default DogList;
+
 
